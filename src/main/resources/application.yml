@@ -1,3 +1,8 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /app
 spring:
   application:
     name: demo
+
