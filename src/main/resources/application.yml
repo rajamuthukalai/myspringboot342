@@ -10,6 +10,7 @@ ibm:
   mq:
     queueManager: QM1
     channel: DEV.ADMIN.SVRCONN
+    queue: "DEV.QUEUE.1" # default queue created by ibm mq
     connName: localhost(1414)
     user: admin
     password: passw0rd
