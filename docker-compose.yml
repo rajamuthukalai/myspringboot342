@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  app:
+    build: .
+    container_name: myspringboot342
+    depends_on:
+      mq:
+        condition: service_started
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_PROFILES_ACTIVE=local
+    restart: always
   mq:
     image: ibm-mqadvanced-server-dev:9.4.1.1-arm64
     container_name: QM1
