@@ -11,3 +11,5 @@ podman machine start
 podman images
 podman volume create qm1data
 podman run --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --volume qm1data:/mnt/mqm --publish 1414:1414 --publish 9443:9443 --detach --env MQ_APP_USER=app --env MQ_APP_PASSWORD=passw0rd --env MQ_ADMIN_USER=admin --env MQ_ADMIN_PASSWORD=passw0rd --name QM1 localhost/ibm-mqadvanced-server-dev:9.4.1.1-arm64
+
+use docker-compose.yaml to spin up the mq container as alternative to the above podman steps.
